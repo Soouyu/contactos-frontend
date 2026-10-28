@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Sistema de Gestion de Contactos - Frontend
 
-## Getting Started
+Aplicacion web en Next.js que consume la api de contactos. Esta misma permite iniciar sesioin y gestionar contactos con el crud completo (crear,listar,buscar,editar y eliminar).
 
-First, run the development server:
+## Tecnologias Usadas
+- Next.js (App router) con TypeScript
+- CSS propio con su hoja de estilos separada
+- fecth para consumir la api
 
-```bash
+## Requisitos previos
+
+- Node.js 18 o superior
+- El backend debe estar corriendo en http://localhost:8080
+
+## Como Correr el proyecto
+
+1.- Instalar dependencias con:
+ npm install
+
+2.- Levantar la Aplicacion
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3.- Abrir http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Credenciales de prueba
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Usuario: admin
+- Clave: admin123
 
-## Learn More
+## Funcionalidades
+- Login con jwt ( este token se guarda con el navegador)
+- LIstado de contactos
+- Crear, Editar y eliminar contactos (crud completo)
+- Busqueda por nombre
+- Etiqueta por contactos
+- Validaciones (campos obligatorios, formato del correo, telefono solo con numeros)
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Desiciones Tecnologicas
+- Next.js con app router: 
+Use la estructura de las carpetas de next donde cada carpeta es una ruta como login,contactos que es la forma moderna y la que exige la prueba que se haga.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- TypeScript:
+Lo utilize por el tipado que maneja,que ayuda a detectar errores antes y deja mucho mas sencillo la forma que tienen los datos ( como el tipo de contacto)
 
-## Deploy on Vercel
+- Fetch directo:
+Decidi consumir la api con fecth porque es el enfoque directo y mas entendible para una app de este tamano.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Estado con useState:
+Manejo el estado del formulario y la lista con useState, sin librerias extras, porque la app no necesitaba un manejo de estados complejos a mi parecer.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- CSS propio:
+Use una hoja de estilos propia, para mantener el proyecto lo mas simple y tener un control directo de los estilos.
+
+- Catalogo de etiquetas:
+Las categorias (Familia,Amigos,etc) tome la desicion de que esten fijas en el frontend porque son pocas; y las etiquetas asignadas van a cada contacto.
+
+

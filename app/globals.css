@@ -1,26 +1,137 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Roboto;
+  background: white;
+  margin: 0;
+}
+
+/* Contenedores */
+.contenedor {
+  max-width: 600px;
+  margin: 40px;
+  padding: 0 8px;
+}
+
+.contenedor-login {
+  max-width: 300px;
+  margin: 80px auto;
+  padding: 0 16px;
+}
+
+/* Textos */
+.titulo {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.aviso {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.error {
+  color: #dc2626;
+}
+
+/* Encabezado (título + cerrar sesión) */
+.encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+/* Formulario */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.campo {
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+/* Botones */
+.acciones {
+  display: flex;
+  gap: 8px;
+}
+
+.boton {
+  padding: 8px;
+  border: 2px solid #000000;
+  border-radius: 1px;
+  cursor: pointer;
+}
+
+.boton-primario {
+  background: #800080;
+  color: white;
+}
+
+.boton-cerrarSesion {
+  background: #FFFF00;
+}
+
+.boton-editar {
+  background: #0000ff;
+  color: white;
+}
+
+.boton-borrar {
+  background: #dc2626;
+  color: white;
+}
+
+/* Etiquetas */
+.etiquetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.etiqueta {
+  background: #e5e5e5;
+  color: black;
+}
+
+.etiqueta-activa {
+  background: #008000;
+  color: white;
+}
+
+/* Lista de contactos */
+.lista {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.info {
+  flex: 1;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 4px;
+  background: white;
+}
+
+.tags {
+  color: #888;
 }
