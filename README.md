@@ -55,4 +55,10 @@ Use una hoja de estilos propia, para mantener el proyecto lo mas simple y tener 
 - Catalogo de etiquetas:
 Las categorias (Familia,Amigos,etc) tome la desicion de que esten fijas en el frontend porque son pocas; y las etiquetas asignadas van a cada contacto.
 
+## PC
+<img width="1600" height="874" alt="image" src="https://github.com/user-attachments/assets/6140a00c-4482-4728-b952-9a034ce42e1d" />
+
+## MOBIL 
+
+<img width="1375" height="957" alt="image" src="https://github.com/user-attachments/assets/d9164e6f-7c30-49e6-bd99-aa7eacd2394d" />
 
